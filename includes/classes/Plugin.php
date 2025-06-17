@@ -10,7 +10,7 @@ use GoodWP\Altinator\Vendor\GoodWP\Common\Plugin\Plugin as Base_Plugin;
  * {@inheritDoc}
  */
 class Plugin extends Base_Plugin {
-    public const VERSION = '1.0.0-alpha.1';
+    public const VERSION = '1.0.0-alpha.2';
     public const SLUG = 'altinator';
     public readonly string $path;
     public readonly string $relative_path;
