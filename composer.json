@@ -1,0 +1,163 @@
+{
+    "name": "goodwp/altinator",
+    "description": "A WordPress plugin to help you optimize your image alternative texts and make your site more accessible.",
+    "type": "wordpress-plugin",
+    "version": "1.0.0-alpha.1",
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "GoodWP\\Altinator\\": "includes/classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fabian Todt",
+            "email": "mail@fabiantodt.at"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:goodwp/common.git",
+            "only": [
+                "goodwp/common"
+            ]
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:goodwp/admin.git",
+            "only": [
+                "goodwp/admin"
+            ]
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "goodwp/admin": "~0.7.0",
+        "goodwp/common": "~0.8.0",
+        "goodwp/goodenberg": "^0.1.2"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^3.1",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "phpstan/phpstan": "^2.1",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "squizlabs/php_codesniffer": "^3.11",
+        "lucatume/wp-browser": "^4.5",
+        "gumlet/php-image-resize": "^1.6"
+    },
+    "scripts": {
+        "phpcs": "vendor/bin/phpcs -s",
+        "phpcs:fix": "vendor/bin/phpcbf",
+        "phpstan": "vendor/bin/phpstan analyze --memory-limit 1G",
+        "lint": "find . -name '*.php' -not -path './.ddev/*' -not -path './vendor/*' -not -path './node_modules/*' -not -path './wordpress/*' -not -path './dependencies/*' -exec php -l '{}' \\;",
+        "plugin-check": "wp plugin check altinator --categories=general,security,performance,accessibility,plugin_repo --exclude-directories=.ddev,dependencies,vendor,wordpress,node_modules,tests,bundled --exclude-files=.gitignore,.env,.distignore,.env.example,src/.gitkeep,phpstan.neon.dist,phpcs.xml.dist",
+        "code-quality": [
+            "@lint",
+            "@phpcs",
+            "@phpstan"
+        ],
+        "tests:unit": [
+            "codecept clean",
+            "codecept run Unit"
+        ],
+        "tests:unit:coverage": [
+            "codecept run Unit --coverage=coverage-unit.cov"
+        ],
+        "tests:integration": [
+            "codecept clean",
+            "codecept run Integration"
+        ],
+        "tests:integration:coverage": [
+            "codecept run Integration --coverage=coverage-integration.cov"
+        ],
+        "tests:functional": [
+            "codecept clean",
+            "codecept run Functional"
+        ],
+        "tests:functional:coverage": [
+            "codecept run Functional --coverage=coverage-functional.cov"
+        ],
+        "tests:endtoend": [
+            "codecept clean",
+            "codecept run EndToEnd"
+        ],
+        "tests": [
+            "@tests:unit",
+            "@tests:integration",
+            "@tests:functional",
+            "@tests:endtoend"
+        ],
+        "tests:coverage": [
+            "codecept clean",
+            "@tests:unit:coverage",
+            "@tests:integration:coverage",
+            "phpcov merge tests/_output --html tests/_output/coverage-html"
+        ],
+        "tests:fast": [
+            "@tests:unit",
+            "@tests:integration"
+        ],
+        "tests:slow": [
+            "@tests:functional",
+            "@tests:endtoend"
+        ],
+        "plugin-zip": [
+            "wp dist-archive . ./ --force --plugin-dirname=altinator"
+        ],
+        "i18n": [
+            "wp i18n make-pot . ./languages/altinator.pot --exclude=dependencies,vendor,wordpress,node_modules",
+            "wp i18n make-mo languages",
+            "wp i18n make-php languages"
+        ],
+        "build": [
+            "@composer install --no-dev --no-scripts",
+            "@prefix-namespaces:build",
+            "@plugin-zip"
+        ],
+        "strauss-install": [
+            "test -f ./vendor/bin/strauss.phar || (mkdir -p ./vendor/bin && curl -o ./vendor/bin/strauss.phar -L -C - https://github.com/BrianHenryIE/strauss/releases/download/0.21.0/strauss.phar)"
+        ],
+        "prefix-namespaces": [
+            "@strauss-install",
+            "@php vendor/bin/strauss.phar",
+            "@composer dump-autoload"
+        ],
+        "prefix-namespaces:build": [
+            "@strauss-install",
+            "@php vendor/bin/strauss.phar --deleteVendorPackages=true",
+            "@composer dump-autoload"
+        ],
+        "post-install-cmd": [
+            "@prefix-namespaces"
+        ],
+        "post-update-cmd": [
+            "@prefix-namespaces"
+        ]
+    },
+    "extra": {
+        "merge-plugin": {
+            "include": [
+                "composer.local.json"
+            ]
+        },
+        "strauss": {
+            "target_directory": "vendor/vendor-prefixed",
+            "classmap_prefix": "GoodWP_Altinator_",
+            "constant_prefix": "GWP_BP_PLUGIN_",
+            "namespace_prefix": "GoodWP\\Altinator\\Vendor\\",
+            "delete_vendor_packages": false
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true
+        }
+    }
+}

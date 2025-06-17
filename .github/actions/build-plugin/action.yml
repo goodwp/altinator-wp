@@ -1,0 +1,74 @@
+name: Build Plugin
+description: Build the plugin zip file
+inputs:
+    composer-token:
+        description: A GitHub PAT to access private repositories
+        required: true
+outputs:
+    zip-file:
+        description: Name of the zip file (relative path to repository)
+        value: ${{ steps.find-zip.outputs.zip-file }}
+runs:
+    using: "composite"
+    steps:
+        # Set up PHP environment
+        -   name: Set up PHP
+            uses: shivammathur/setup-php@v2
+            with:
+                php-version: 8.4
+
+        # Set up Node environment
+        -   name: Use desired version of Node.js
+            uses: actions/setup-node@v4
+            with:
+                node-version-file: '.nvmrc'
+                check-latest: true
+                cache: npm
+
+        # Install WP-CLI
+        -   name: Install WP-CLI
+            run: wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -O wp-cli.phar
+            shell: bash # required for composite actions
+
+        # Install WP-CLI dist-archive-command package
+        -   name: Install dist-archive-command
+            run: php wp-cli.phar package install wp-cli/dist-archive-command
+            shell: bash # required for composite actions
+
+        # Add wp-cli.phar to PATH
+        -   name: Make wp-cli executable
+            run: chmod +x wp-cli.phar && sudo mv wp-cli.phar /usr/local/bin/wp
+            shell: bash # required for composite actions
+
+        # Install composer dependencies and handle caching in one go.
+        # @link https://github.com/marketplace/actions/install-composer-dependencies
+        -   name: Install Composer dependencies
+            uses: ramsey/composer-install@v3
+            env:
+                COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ inputs.composer-token }}"}}'
+            with:
+                # Bust the cache at least once a month - output format: YYYY-MM-DD.
+                custom-cache-suffix: $(date -u -d "-0 month -$(($(date +%d)-1)) days" "+%F")
+
+        # Install npm dependencies
+        -   name: Install npm dependencies
+            run: npm ci
+            shell: bash # required for composite actions
+
+        # Build assets (JS + CSS)
+        -   name: Build assets
+            run: npm run build
+            shell: bash # required for composite actions
+
+        # Run PHP build script and generate zip file
+        -   name: Build Plugin ZIP
+            run: composer run-script build
+            shell: bash # required for composite actions
+
+        # Find the dynamically named ZIP file and export it as output.
+        -   name: Find Plugin ZIP
+            id: find-zip
+            run: |
+                echo "ZIP-File is $(ls altinator.*.zip)"
+                echo "zip-file=$(ls altinator.*.zip)" >> $GITHUB_OUTPUT
+            shell: bash # required for composite actions

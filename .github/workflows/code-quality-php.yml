@@ -1,0 +1,95 @@
+name: Lint PHP
+
+on:
+    # Run on all relevant pushes and on all relevant pull requests.
+    push:
+        paths:
+            - '**.php'
+            - 'composer.json'
+            - 'composer.lock'
+            - 'phpcs.xml'
+            - 'phpcs.xml.dist'
+            - 'phpstan.neon'
+            - 'phpstan.neon.dist'
+            - 'code-quality-php.yml'
+    pull_request:
+        paths:
+            - '**.php'
+            - 'composer.json'
+            - 'composer.lock'
+            - 'phpcs.xml'
+            - 'phpcs.xml.dist'
+            - 'phpstan.neon'
+            - 'phpstan.neon.dist'
+            - 'code-quality-php.yml'
+    # Allow manually triggering the workflow.
+    workflow_dispatch:
+
+# Cancels all previous workflow runs for the same branch that have not yet completed.
+concurrency:
+    # The concurrency group contains the workflow name and the branch name.
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                php_version: [ '8.2', '8.3', '8.4' ]
+
+        name: "Lint: PHP ${{ matrix.php_version }}"
+
+        steps:
+            -   name: Checkout code
+                uses: actions/checkout@v4
+
+            # Install PHP version for base dev env setup.
+            -   name: Install PHP for the composer install
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: '8.4'
+                    coverage: none
+
+            # Validate the composer.json file.
+            # @link https://getcomposer.org/doc/03-cli.md#validate
+            -   name: Validate Composer installation
+                run: composer validate --no-check-all
+
+            # Install dependencies and handle caching in one go.
+            # @link https://github.com/marketplace/actions/install-composer-dependencies
+            -   name: Install Composer dependencies
+                uses: ramsey/composer-install@v3
+                env:
+                    COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.GOODWP_COMPOSER_PAT }}"}}'
+                with:
+                    # Bust the cache at least once a month - output format: YYYY-MM-DD.
+                    custom-cache-suffix: $(date -u -d "-0 month -$(($(date +%d)-1)) days" "+%F")
+
+            -   name: Install PHP for the actual test
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: ${{ matrix.php_version }}
+                    ini-values: zend.assertions=1, error_reporting=-1, display_errors=On
+                    coverage: none
+                    tools: cs2pr
+
+            -   name: Lint against parse errors
+                run: composer run-script lint
+
+            # Check the CodeStyle of the files.
+            # The results of the CS check will be shown inline in the PR via the CS2PR tool.
+            # @link https://github.com/staabm/annotate-pull-request-from-checkstyle/
+            -   name: Check PHP code style
+                id: phpcs
+                run: composer run-script phpcs -- --no-cache --report-full --report-checkstyle=./phpcs-report.xml
+
+            -   name: Show PHPCS results in PR
+                if: ${{ always() && steps.phpcs.outcome == 'failure' }}
+                run: cs2pr ./phpcs-report.xml
+
+            # Check the PHPStan of the files.
+            -   name: Check PHPStan
+                id: phpstan
+                run: composer run-script phpstan -- --error-format=checkstyle | cs2pr

@@ -1,0 +1,16 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+parameters:
+    level: 5
+    exceptions:
+        uncheckedExceptionClasses:
+            - 'GoodWP\Altinator\Vendor\Psr\Container\ContainerExceptionInterface'
+            - 'GoodWP\Altinator\Vendor\lucatume\DI52\ContainerException'
+    paths:
+        - includes
+        - src
+        - altinator.php
+    scanDirectories:
+        - vendor/vendor-prefixed/
+    # We can't make sure developers using our plugins adhere to PHPStan.
+    treatPhpDocTypesAsCertain: false

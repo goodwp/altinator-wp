@@ -1,0 +1,44 @@
+.table-view-list.media .altinator-alt__text {
+    margin-bottom: 0;
+}
+
+.table-view-list.media .altinator-alt__text:empty {
+    margin: 0;
+}
+
+.table-view-list.media .altinator-alt__edit-form .button[hidden] {
+    display: none;
+}
+
+.table-view-list.media .altinator-alt__edit-form .button .spinner {
+    margin-right: 0;
+}
+
+.table-view-list.media .altinator-alt__edit-form .button .spinner[hidden] {
+    display: none;
+}
+
+.table-view-list.media .altinator-alt__edit-form .button.button-icon svg {
+    display: block;
+    width: 1.5em;
+    height: 100%;
+    color: inherit;
+    /*stroke: currentColor;*/
+    /*fill: currentColor;*/
+}
+
+.table-view-list.media .altinator-alt__edit-form .button.button-icon .spinner {
+    margin: 0;
+}
+
+.table-view-list.media .altinator-alt__edit-form .button.button-icon:has(.spinner.is-active) svg {
+    display: none;
+}
+
+.table-view-list.media .altinator-alt__edit-form[data-wp-cloak] {
+    display: none;
+}
+
+.table-view-list.media .altinator-alt__edit-form textarea {
+    width: 100%;
+}

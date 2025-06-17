@@ -1,0 +1,40 @@
+name: Plugin ZIP
+
+on:
+    release:
+        types:
+            - published
+
+# Cancels all previous workflow runs for pull requests that have not completed.
+concurrency:
+    # The concurrency group contains the workflow name and the branch name for pull requests
+    # or the commit hash for any other events.
+    group: ${{ github.workflow }}-${{ github.ref_name }}
+    cancel-in-progress: true
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        # Required for sticky comment to work.
+        permissions:
+            contents: write
+        steps:
+            # Checkout the code
+            -   name: Checkout Code
+                uses: actions/checkout@v3
+            # Build Plugin ZIP
+            -   name: Build Plugin ZIP
+                id: build-zip
+                uses: ./.github/actions/build-plugin
+                with:
+                    composer-token: ${{ secrets.GOODWP_COMPOSER_PAT }}
+            # Attach dynamically found ZIP to Release
+            -   name: Attach Plugin ZIP (Release)
+                uses: actions/upload-release-asset@v1
+                env:
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                with:
+                    upload_url: ${{ github.event.release.upload_url }}
+                    asset_path: ${{ steps.build-zip.outputs.zip-file }}
+                    asset_name: ${{ steps.build-zip.outputs.zip-file }}
+                    asset_content_type: application/zip

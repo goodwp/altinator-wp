@@ -1,0 +1,84 @@
+body.has-altinator-frontend-inspector [data-altinator] {
+    /* border: 5px solid var(--altinator-color); */
+    outline: 5px solid var(--altinator-color);
+    outline-offset: -5px;
+}
+
+#wpadminbar #wp-admin-bar-altinator-inspector .ab-icon::before {
+    content: "\f128";
+    top: 2px;
+}
+
+#wpadminbar #wp-admin-bar-altinator-inspector[aria-pressed="true"] .ab-icon {
+    height: 100%;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#wpadminbar #wp-admin-bar-altinator-inspector[aria-pressed="true"] .ab-icon::before {
+    /* TODO: we should make this value dynamic based on the chosen wordpress theme */
+    background-color: #8c8 !important;
+    width: 0.5em;
+    height: 0.5em;
+    display: block;
+    content: "";
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+[data-altinator="missing-alt"] {
+    --altinator-color: red;
+}
+
+[data-altinator="empty-alt"] {
+    --altinator-color: orange;
+}
+
+.altinator-frontend-inspector-status {
+    display: none !important;
+}
+
+body.has-altinator-frontend-inspector .altinator-frontend-inspector-status {
+    display: initial !important;
+    border: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+body.has-altinator-frontend-inspector [data-altinator]:hover + .altinator-frontend-inspector-status,
+body.has-altinator-frontend-inspector [data-altinator]:focus + .altinator-frontend-inspector-status,
+body.has-altinator-frontend-inspector [data-altinator] + .altinator-frontend-inspector-status:focus,
+body.has-altinator-frontend-inspector [data-altinator] + .altinator-frontend-inspector-status:hover,
+body.has-altinator-frontend-inspector [data-altinator] + .altinator-frontend-inspector-status:focus-within {
+    z-index: 2000;
+    position: absolute;
+    font-size: 0.75rem;
+    background-color: black;
+    display: block !important;
+    color: #fff;
+    padding: 0.5rem;
+    border: unset;
+    clip-path: unset;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: auto;
+    word-wrap: unset !important;
+}
+
+body.has-altinator-frontend-inspector .altinator-frontend-inspector-status .altinator-frontend-inspector-edit-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+body.has-altinator-frontend-inspector .altinator-frontend-inspector-status .altinator-frontend-inspector-edit-link:hover,
+body.has-altinator-frontend-inspector .altinator-frontend-inspector-status .altinator-frontend-inspector-edit-link:focus {
+    text-decoration: none;
+}

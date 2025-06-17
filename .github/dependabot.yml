@@ -1,0 +1,26 @@
+version: 2
+updates:
+    # Enable version updates for Composer
+    -   package-ecosystem: "composer"
+        # Look for `composer.json` and `composer.lock` files in the root directory
+        directory: "/"
+        # Check for updates once a week
+        schedule:
+            interval: "weekly"
+        target-branch: "develop"
+        assignees:
+            - "gaambo"
+        # Set maximum number of open pull requests for version updates
+        open-pull-requests-limit: 10
+        # Optional: Add labels to pull requests
+        labels:
+            - "dependencies"
+            - "composer"
+            # Optional: Specify version update strategy
+        versioning-strategy: auto
+        # Only allow direct production dependencies
+        allow:
+            -   dependency-type: "direct"
+        # Ignore dev dependencies
+        ignore:
+            -   dependency-type: "development"

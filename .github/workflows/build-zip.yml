@@ -1,0 +1,29 @@
+name: Plugin ZIP
+
+on:
+    # Allow manually triggering the workflow.
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        # Required for sticky comment to work.
+        permissions:
+            contents: write
+        steps:
+            # Checkout the code
+            -   name: Checkout Code
+                uses: actions/checkout@v3
+            # Build Plugin ZIP
+            -   name: Build Plugin ZIP
+                id: build-zip
+                uses: ./.github/actions/build-plugin
+                with:
+                    composer-token: ${{ secrets.GOODWP_COMPOSER_PAT }}
+            # Upload ZIP as PR artifact
+            -   name: Upload Plugin ZIP (PR)
+                id: upload-artifacts
+                uses: actions/upload-artifact@v4
+                with:
+                    name: plugin.zip
+                    path: ${{ steps.build-zip.outputs.zip-file }}

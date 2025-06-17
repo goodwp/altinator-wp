@@ -1,0 +1,13 @@
+services:
+    web:
+        volumes: [ ]
+        ## WARNING: This will mess with mutagen.
+        # Instead use the symlink-based method in config.yaml
+        # Mounts the host's project root (../ relative to the .ddev folder,
+        # which means the project directory itself)
+        # into /var/www/html/wp-content/plugins/your-plugin-slug in the container.
+        #
+        # IMPORTANT: Replace 'your-plugin-slug' with the actual directory name
+        # WordPress expects for your plugin. This is often the same as your
+        # project's root directory name (e.g., 'your-plugin-slug').
+        #- ../:/var/www/html/wordpress/wp-content/plugins/altinator

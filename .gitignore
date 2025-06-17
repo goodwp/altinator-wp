@@ -1,0 +1,34 @@
+# Dependency directories
+node_modules
+vendor
+
+# Optional npm cache directory
+.npm
+
+# Build files
+build
+*.zip
+
+# WordPress
+/wordpress/*
+!/wordpress/wp-config-ddev.php
+
+# IDE & local env
+.DS_Store
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+.idea
+.vscode
+auth.json
+
+# Local overrides
+phpcs.xml
+phpstan.neon
+
+# Logs
+logs
+*.log
+npm-debug.log*
