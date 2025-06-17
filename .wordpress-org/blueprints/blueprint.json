@@ -1,0 +1,38 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "preferredVersions": {
+        "php": "8.2",
+        "wp": "6.8"
+    },
+    "features": {
+        "networking": true
+    },
+    "phpExtensionBundles": ["kitchen-sink"],
+    "landingPage": "/wp-admin/upload.php",
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+            "step": "setSiteOptions",
+            "options": {
+                "blogname": "Altinator Demo",
+                "blog_charset": "UTF-8",
+                "template": "twentytwentyfive",
+                "stylesheet": "twentytwentyfive"
+            }
+        },
+        {
+            "step": "installPlugin",
+            "pluginData": {
+                "resource": "wordpress.org/plugins",
+                "slug": "altinator"
+            },
+            "options": {
+                "activate": true
+            }
+        }
+    ]
+}
