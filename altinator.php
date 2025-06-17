@@ -13,7 +13,6 @@
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       altinator
  * Domain Path:       /languages
- * Update URI:        https://github.com/goodwp/altinator/
  *
  * @package           GoodWP\Altinator
  */

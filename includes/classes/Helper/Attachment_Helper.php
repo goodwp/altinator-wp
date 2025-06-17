@@ -46,6 +46,7 @@ abstract class Attachment_Helper {
             'posts_per_page' => 10,
             'fields'     => 'ids',
             'suppress_filters' => false, // WPML/Polylang should hook into this.
+            // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Only runs when frontend inspector is active.
             'meta_query' => [
                 [
                     'key'     => '_wp_attached_file',
