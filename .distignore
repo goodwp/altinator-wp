@@ -30,4 +30,5 @@ phpstan.neon.dist
 tests
 webpack.config.js
 /wordpress
+vendor/bin
 wp-cli.yml
