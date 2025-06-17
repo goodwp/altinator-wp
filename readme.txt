@@ -2,9 +2,9 @@
 Contributors:      gaambo
 Tags:              a11y, accessibility, alternative texts, images, media
 Tested up to:      6.8
-Stable tag:        1.0.0-alpha.2
-License:           GPL-2.0-or-later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Stable tag:        1.0.0
+License:           GPL-3.0-or-later
+License URI:       https://www.gnu.org/licenses/gpl-3.0.html
 
 Helps you optimize your image alternative texts and make your site more accessible.
 

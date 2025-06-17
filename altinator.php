@@ -6,7 +6,7 @@
  * Description:       Helps you optimize your image alternative texts and make your site more accessible.
  * Requires at least: 6.8
  * Requires PHP:      8.2
- * Version:           1.0.0-alpha.2
+ * Version:           1.0.0
  * Author:            GoodWP
  * Author URI:        https://goodwp.io
  * License:           GNU General Public License v3.0
