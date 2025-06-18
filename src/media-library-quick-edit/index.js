@@ -4,13 +4,14 @@ import {
     getElement,
     store,
     withSyncEvent,
+    withScope,
 } from "@wordpress/interactivity";
 import "./styles.css";
 
 // see https://core.trac.wordpress.org/ticket/60647
 const { notices, data } = window.wp;
 const { apiFetch } = window.wp;
-const { _x } = window.wp.i18n;
+const { _x, __ } = window.wp.i18n;
 
 const { state, actions } = store( "altinator/alt-quick-edit", {
     state: {
@@ -51,6 +52,13 @@ const { state, actions } = store( "altinator/alt-quick-edit", {
                 ? _x( "Close", "quick edit", "altinator" )
                 : _x( "Cancel", "quick edit", "altinator" );
         },
+        get originalAltText() {
+            const { originalAltText } = getContext();
+            if ( originalAltText && originalAltText.length > 0 ) {
+                return originalAltText;
+            }
+            return __( "No alt-text", "altinator" );
+        },
     },
     actions: {
         handleToggle: withSyncEvent( ( event ) => {
@@ -66,6 +74,11 @@ const { state, actions } = store( "altinator/alt-quick-edit", {
             const wasEditing = context.isEditing;
             context.isEditing = ! wasEditing;
             context.wasEditing = wasEditing;
+
+            if ( ! wasEditing ) {
+                // Reset result.
+                context.saveResult = null;
+            }
         },
         updateAltText( newValue ) {
             const context = getContext();

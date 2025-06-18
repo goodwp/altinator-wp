@@ -30,6 +30,12 @@ module.exports = [
                 "settings",
                 "index.js"
             ),
+            "modules/media-library-quick-edit-dummy": resolve(
+                process.cwd(),
+                "src",
+                "media-library-quick-edit",
+                "dummy.js"
+            ),
         }
     },
     {

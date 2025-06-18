@@ -55,6 +55,13 @@ class Quick_Edit implements Bootable {
         wp_enqueue_script( 'wp-data' );
         wp_enqueue_script( 'wp-api-fetch' );
         wp_enqueue_script( 'wp-i18n' );
+
+        // This is a dummy script that is only used to register the translations.
+        // Workaround for https://core.trac.wordpress.org/ticket/60234 .
+        $dummy_handle = $this->asset_manager->register_script( 'media-library-quick-edit-dummy', 'modules/media-library-quick-edit-dummy' );
+        $this->asset_manager->enqueue_script( 'media-library-quick-edit' );
+        wp_set_script_translations( $dummy_handle, 'altinator' );
+
         $this->asset_manager->register_style( 'media-library-quick-edit', 'modules/media-library-quick-edit' );
         $this->asset_manager->enqueue_style( 'media-library-quick-edit' );
     }

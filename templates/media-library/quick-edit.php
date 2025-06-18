@@ -32,7 +32,9 @@ $edit_toggle_label = sprintf(
      data-wp-interactive="altinator/alt-quick-edit"
      data-wp-context="<?php echo esc_attr( wp_json_encode( $client_context ) ); ?>"
      data-wp-watch="callbacks.focusFirstElement">
-    <p class="altinator-alt__text" data-wp-text="context.originalAltText" data-wp-bind--hidden="context.isEditing"></p>
+    <p class="altinator-alt__text" data-wp-text="state.originalAltText" data-wp-bind--hidden="context.isEditing">
+        <?php echo esc_html( empty( $alt_text ) ? __( 'No alt-text', 'altinator' ) : $alt_text ); ?>
+    </p>
     <div class="altinator-alt__edit-form"
          id="<?php echo esc_attr( $id ); ?>"
          data-wp-bind--hidden="!context.isEditing"
