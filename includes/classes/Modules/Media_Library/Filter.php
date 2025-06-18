@@ -48,7 +48,13 @@ class Filter implements Bootable {
     }
 
 
-    public function filter_ajax_attachment_query( $args ): array {
+    /**
+     * Filters the ajax attachment query triggered in grid view.
+     *
+     * @param array|WP_Query $args Query arguments.
+     * @return array
+     */
+    public function filter_ajax_attachment_query( mixed $args ): array {
         // phpcs:disable WordPress.Security.NonceVerification.Recommended -- Hook is triggered by core after parsing the core query variables - assume to be safe.
         if ( ! array_key_exists( self::QUERY_VAR, $_REQUEST['query'] ) || $_REQUEST['query'][ self::QUERY_VAR ] === null || $_REQUEST['query'][ self::QUERY_VAR ] === '' ) {
             return $args;
@@ -105,7 +111,12 @@ class Filter implements Bootable {
                 ];
             } else {
                 // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- No alternative, alt text is stored as meta field.
-                $query['meta_query'] = $meta_query;
+                $query['meta_query'] = [
+                    // Ensure other meta_queries added by other plugins still work.
+                    // Some plugins do not check if meta_queries exist.
+                    'relation' => 'AND',
+                    $meta_query,
+                ];
             }
         } elseif ( ! empty( $query->get( 'meta_query' ) ) ) {
             $query->set(
@@ -117,12 +128,27 @@ class Filter implements Bootable {
                 ]
             );
         } else {
-            $query->set( 'meta_query', $meta_query );
+            // Ensure other meta_queries added by other plugins still work.
+            // Some plugins do not check if meta_queries exist.
+            $query->set(
+                'meta_query',
+                [
+					'relation' => 'AND',
+					$meta_query,
+				]
+            );
         }
 
         return $query;
     }
 
+    /**
+     * This adds the filter to the list view.
+     *
+     * @param string $post_type The post type for which the current WP_List_Table is.
+     * @param string $which Top or bottom filter/actions row.
+     * @return void
+     */
     public function add_filter_by_alt_text_to_media_library( $post_type, $which ): void {
         if ( $post_type !== 'attachment' ) {
             return;
@@ -173,7 +199,13 @@ class Filter implements Bootable {
         <?php
     }
 
-    public function filter_pre_get_posts( $query ): void {
+    /**
+     * Filters the main query for the list view.
+     *
+     * @param array|WP_Query $query Query arguments.
+     * @return void
+     */
+    public function filter_pre_get_posts( mixed $query ): void {
         if ( ! is_admin() || ! $query->is_main_query() || $query->get( 'post_type' ) !== 'attachment' ) {
             return;
         }

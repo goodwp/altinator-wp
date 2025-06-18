@@ -1,5 +1,9 @@
 import { __, _x } from "@wordpress/i18n";
 
+/**
+ * This is only for the grid view.
+ */
+
 ( function () {
     const media = wp.media;
     media.view.AttachmentFilters.AltinatorAltFilter =
