@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Altinator 1.0.0-alpha.2\n"
+"Project-Id-Version: Altinator 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/html\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-17T18:46:06+02:00\n"
+"POT-Creation-Date: 2025-06-18T13:39:19+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: altinator\n"
@@ -34,55 +34,59 @@ msgstr ""
 msgid "https://goodwp.io"
 msgstr ""
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:152
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:154
 msgid "Alt-Text Inspector"
-msgstr ""
-
-#. translators: %s: image filename
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:182
-#, php-format
-msgid "The image %s is missing alt text. Please add a descriptive alt text for accessibility."
 msgstr ""
 
 #. translators: %s: image filename
 #: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:184
 #, php-format
+msgid "The image %s is missing alt text. Please add a descriptive alt text for accessibility."
+msgstr ""
+
+#. translators: %s: image filename
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:186
+#, php-format
 msgid "The image %s has an empty alt text. Please make sure that is correct."
 msgstr ""
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:203
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:205
 msgctxt "frontend inspector tooltip"
 msgid "Edit here."
 msgstr ""
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:204
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:206
 msgctxt "frontend inspector tooltip"
 msgid "Edit the image"
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Filter.php:148
+#: includes/classes/Modules/Media_Library/Filter.php:174
 #: build/modules/media-filter.js:1
-#: src/media-filter/index.js:60
+#: src/media-filter/index.js:64
+#: build/modules/media-filter.js:114
 msgid "Filter by alt text"
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Filter.php:151
+#: includes/classes/Modules/Media_Library/Filter.php:177
 #: build/modules/media-filter.js:1
-#: src/media-filter/index.js:12
+#: src/media-filter/index.js:16
+#: build/modules/media-filter.js:66
 msgctxt "media library filter"
 msgid "Alt Text: All"
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Filter.php:155
+#: includes/classes/Modules/Media_Library/Filter.php:181
 #: build/modules/media-filter.js:1
-#: src/media-filter/index.js:23
+#: src/media-filter/index.js:27
+#: build/modules/media-filter.js:77
 msgctxt "media library filter"
 msgid "Has Alt Text"
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Filter.php:164
+#: includes/classes/Modules/Media_Library/Filter.php:190
 #: build/modules/media-filter.js:1
-#: src/media-filter/index.js:34
+#: src/media-filter/index.js:38
+#: build/modules/media-filter.js:88
 msgctxt "media library filter"
 msgid "No Alt Text"
 msgstr ""
@@ -91,13 +95,18 @@ msgstr ""
 msgid "You can edit the alternative text of a file directly in the list view, by clicking \"Edit\" in the \"Alternative Text\" column."
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Quick_Edit.php:92
+#: includes/classes/Modules/Media_Library/Quick_Edit.php:99
+#: templates/media-library/quick-edit.php:36
+#: build/modules/media-library-quick-edit.js:149
+#: src/media-library-quick-edit/index.js:60
+#: build/modules/media-library-quick-edit.js:95
 msgid "No alt-text"
 msgstr ""
 
 #: includes/classes/Settings/Settings.php:46
 #: build/settings.js:51
 #: src/settings/components/sections/modules/index.js:27
+#: build/settings.js:5156
 msgid "Enable Frontend Inspector"
 msgstr ""
 
@@ -120,175 +129,133 @@ msgid "Altinator"
 msgstr ""
 
 #. translators: Attachment post title
-#: templates/admin/media-library/quick-edit.php:26
+#: templates/media-library/quick-edit.php:26
 #, php-format
 msgid "Edit the alternative text for the file \"%s\""
 msgstr ""
 
-#: templates/admin/media-library/quick-edit.php:60
+#: templates/media-library/quick-edit.php:62
 msgid "Save"
 msgstr ""
 
-#: templates/admin/media-library/quick-edit.php:70
+#: templates/media-library/quick-edit.php:72
 msgid "Cancel"
 msgstr ""
 
-#: templates/admin/media-library/quick-edit.php:76
+#: templates/media-library/quick-edit.php:78
 msgid "Edit the alternative text"
 msgstr ""
 
-#: templates/admin/media-library/quick-edit.php:84
+#: templates/media-library/quick-edit.php:86
 msgid "Edit"
 msgstr ""
 
 #: build/modules/edit-attachment.js:1
-#: build/modules/media-library-quick-edit.js:1
 msgctxt "media library notice link fallback"
 msgid "More"
 msgstr ""
 
+#: build/modules/media-library-quick-edit.js:111
+#: src/media-library-quick-edit/index.js:30
+#: build/modules/media-library-quick-edit.js:65
+msgctxt "quick edit"
+msgid "Saved"
+msgstr ""
+
+#: build/modules/media-library-quick-edit.js:111
+#: src/media-library-quick-edit/index.js:31
+#: build/modules/media-library-quick-edit.js:66
+msgctxt "quick edit"
+msgid "Failed to save"
+msgstr ""
+
+#: build/modules/media-library-quick-edit.js:138
+#: src/media-library-quick-edit/index.js:49
+#: build/modules/media-library-quick-edit.js:84
+msgctxt "quick edit"
+msgid "Edit"
+msgstr ""
+
+#: build/modules/media-library-quick-edit.js:140
+#: src/media-library-quick-edit/index.js:52
+#: build/modules/media-library-quick-edit.js:87
+msgctxt "quick edit"
+msgid "Close"
+msgstr ""
+
+#: build/modules/media-library-quick-edit.js:140
+#: src/media-library-quick-edit/index.js:53
+#: build/modules/media-library-quick-edit.js:88
+msgctxt "quick edit"
+msgid "Cancel"
+msgstr ""
+
 #: build/settings.js:51
 #: src/settings/components/save/index.js:42
+#: build/settings.js:5115
 msgid "Save Settings"
 msgstr ""
 
 #: build/settings.js:51
 #: src/settings/components/save/index.js:26
+#: build/settings.js:5099
 msgid "Settings saved!"
 msgstr ""
 
 #: build/settings.js:51
-#: src/settings/components/password-control.js:28
-msgid "Show password"
-msgstr ""
-
-#: build/settings.js:51
-msgid "AI Generation Integration"
-msgstr ""
-
-#: build/settings.js:51
-msgid "Altinator AI Service"
-msgstr ""
-
-#: build/settings.js:51
-msgid "Enable AI Generation Integration"
-msgstr ""
-
-#: build/settings.js:51
-msgid "Enable the integration with the Altinator AI generation service."
-msgstr ""
-
-#: build/settings.js:51
-msgid "API Key"
-msgstr ""
-
-#: build/settings.js:51
-msgid "Get an API key / token from the Altinator Dashboard and paste it here."
-msgstr ""
-
-#: build/settings.js:51
-msgid "User Prompt / Instructions"
-msgstr ""
-
-#: build/settings.js:51
-msgid "Add additional prompt/information/context to the alt text generation. Examples: \"Make it sound playful,\" \"Focus on the historical context,\" \"Describe for a technical audience\""
-msgstr ""
-
-#: build/settings.js:51
-msgid "Log alt generation requests"
-msgstr ""
-
-#: build/settings.js:51
-msgid "This allows our Alt Text Generation Service to store your request for a maximum of 30 days to help with support and error resolving."
-msgstr ""
-
-#: build/settings.js:51
-msgid "Basic Auth Settings"
-msgstr ""
-
-#: build/settings.js:51
-msgid "If your site/images are protected by basic auth, you must enter the credentials here, so the generation service can access the images."
-msgstr ""
-
-#: build/settings.js:51
-msgctxt "basic auth settings label"
-msgid "Username"
-msgstr ""
-
-#: build/settings.js:51
-msgctxt "basic auth settings label"
-msgid "Password"
-msgstr ""
-
-#: build/settings.js:51
 #: src/settings/components/sections/modules/index.js:18
+#: build/settings.js:5147
 msgid "Modules"
 msgstr ""
 
 #: build/settings.js:51
 #: src/settings/components/sections/modules/index.js:19
+#: build/settings.js:5148
 msgid "Frontend Inspector"
 msgstr ""
 
 #: build/settings.js:51
 #: src/settings/components/sections/modules/index.js:28
+#: build/settings.js:5157
 msgid "If the frontend inspector feature should be available from the WP Admin Bar."
 msgstr ""
 
 #: build/settings.js:51
 #: src/settings/components/sections/modules/index.js:35
+#: build/settings.js:5164
 msgid "Alt Fallbacks"
 msgstr ""
 
 #: build/settings.js:51
 #: src/settings/components/sections/modules/index.js:38
+#: build/settings.js:5167
 msgid "Some blocks (like the core image block) provide a field to set the alt attribute. If this field is empty in the block editor it will not output any alt-text, even if you later add an alt-text to the attachment in the media library."
 msgstr ""
 
 #: build/settings.js:51
 #: src/settings/components/sections/modules/index.js:51
+#: build/settings.js:5180
 msgid "Enable Alt Fallbacks"
 msgstr ""
 
 #: build/settings.js:51
 #: src/settings/components/sections/modules/index.js:52
+#: build/settings.js:5181
 msgid "This setting will add the alt attribute to certain blocks if the alt text of the blocks is empty and the alt text of the media attachments is not empty."
 msgstr ""
 
 #: build/settings.js:51
-msgid "By default it will work for the core image, gallery, media-text and cover block. But you can add third-party and custom blocks via the `altinator/alt-fallbacks` filter."
+#: src/settings/components/sections/modules/index.js:60
+#: build/settings.js:5189
+msgid "By default it will work for the core image, gallery, media-text and cover block. But you can add third-party and custom blocks via the `altinator/alt_fallback/blocks` filter."
 msgstr ""
 
 #: build/settings.js:51
 #: src/settings/index.js:25
+#: build/settings.js:5397
 msgid "Altinator Settings"
 msgstr ""
 
-#: src/media-library-quick-edit/index.js:29
-msgctxt "quick edit"
-msgid "Saved"
-msgstr ""
-
-#: src/media-library-quick-edit/index.js:30
-msgctxt "quick edit"
-msgid "Failed to save"
-msgstr ""
-
-#: src/media-library-quick-edit/index.js:48
-msgctxt "quick edit"
-msgid "Edit"
-msgstr ""
-
-#: src/media-library-quick-edit/index.js:51
-msgctxt "quick edit"
-msgid "Close"
-msgstr ""
-
-#: src/media-library-quick-edit/index.js:52
-msgctxt "quick edit"
-msgid "Cancel"
-msgstr ""
-
-#: src/settings/components/sections/modules/index.js:60
-msgid "By default it will work for the core image, gallery, media-text and cover block. But you can add third-party and custom blocks via the `altinator/alt_fallback/blocks` filter."
+#: src/settings/components/password-control.js:28
+msgid "Show password"
 msgstr ""

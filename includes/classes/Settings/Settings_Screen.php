@@ -69,7 +69,8 @@ class Settings_Screen extends Admin_Screen implements Bootable {
      * @return void
      */
     public function register_assets(): void {
-        $this->asset_manager->register_script( 'settings', 'settings' );
+        $script_asset_handle = $this->asset_manager->register_script( 'settings', 'settings' );
+        wp_set_script_translations( $script_asset_handle, 'altinator' );
         $this->asset_manager->enqueue_script( 'settings' );
         $this->asset_manager->register_style( 'settings', 'settings', [ 'wp-components', 'wp-editor', 'wp-block-editor', 'wp-block-editor-content' ] );
         $this->asset_manager->enqueue_style( 'settings' );

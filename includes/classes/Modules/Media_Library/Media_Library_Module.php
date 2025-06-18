@@ -82,10 +82,11 @@ class Media_Library_Module extends Module {
 
     public function register_scripts(): void {
         // Always register those, since other submodules may depend on them.
-        $this->asset_manager->register_script(
+        $asset_handle = $this->asset_manager->register_script(
             'media-library-notices',
             'modules/media-library-notices'
         );
+        wp_set_script_translations( $asset_handle, 'altinator' );
         $this->asset_manager->register_style(
             'media-library-notices',
             'modules/media-library-notices',

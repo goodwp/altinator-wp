@@ -221,7 +221,9 @@ class Filter implements Bootable {
         if ( ! $current_screen || $current_screen->id !== 'upload' ) {
             return;
         }
-        $this->asset_manager->register_script( 'media-filter', 'modules/media-filter', [ 'media-views' ] );
+        $asset_handle = $this->asset_manager->register_script( 'media-filter', 'modules/media-filter', [ 'media-views' ] );
         $this->asset_manager->enqueue_script( 'media-filter' );
+
+        wp_set_script_translations( $asset_handle, 'altinator' );
     }
 }

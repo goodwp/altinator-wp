@@ -134,6 +134,8 @@ class Frontend_Inspector_Module extends Module {
             'before'
         );
 
+        wp_set_script_translations( $script_handle, 'altinator' );
+
         $this->asset_manager->enqueue_script( 'frontend-inspector' );
         $this->asset_manager->enqueue_style( 'frontend-inspector' );
     }
