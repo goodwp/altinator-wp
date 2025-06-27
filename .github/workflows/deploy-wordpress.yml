@@ -1,0 +1,36 @@
+name: Deploy to WordPress.org
+
+on:
+    release:
+        types: [ published ]
+
+jobs:
+    deploy-to-wp-repository:
+        name: Deploy to WP.org
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout code
+                uses: actions/checkout@v2
+
+            -   name: Set up Node.js
+                uses: actions/setup-node@v2
+                with:
+                    node-version: 16
+
+            # Build Plugin ZIP
+            -   name: Build Plugin ZIP
+                id: build-zip
+                uses: ./.github/actions/build-plugin
+                with:
+                    composer-token: ${{ secrets.GOODWP_COMPOSER_PAT }}
+
+            -   name: WordPress Plugin Deploy
+                id: deploy
+                uses: 10up/action-wordpress-plugin-deploy@2.3.0
+                with:
+                    generate-zip: false
+                    dry-run: true
+                env:
+                    SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+                    SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+                    SLUG: altinator
