@@ -23,7 +23,16 @@ class Settings extends \GoodWP\Altinator\Vendor\GoodWP\Common\WordPress\Settings
 
         assert( ! empty( static::OPTION_GROUP ), 'Settings class must declare OPTION_GROUP const with option group' );
 
-        foreach ( $this->build_settings() as $key => $args ) {
+        // Build available setting keys before init,
+        // so other services can get settings/options before init.
+        // But do not call build_settings() because it uses translation functions
+        // and those will cause warnings before the init hook.
+        $setting_keys = [
+            'frontend_inspector_enabled',
+            'alt_fallback_enabled',
+        ];
+
+        foreach ( $setting_keys as $key ) {
             $full_key = static::OPTION_GROUP . '_' . $key;
             $this->setting_keys[ $key ] = $full_key;
         }
