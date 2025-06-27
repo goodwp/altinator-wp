@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Altinator 0.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/html\n"
-"POT-Creation-Date: 2025-06-27T12:06:18+02:00\n"
-"PO-Revision-Date: 2025-06-27 12:06+0200\n"
+"POT-Creation-Date: 2025-06-27T12:40:38+02:00\n"
+"PO-Revision-Date: 2025-06-27 12:40+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -107,7 +107,7 @@ msgstr ""
 "bearbeiten, indem du in der Spalte „Alternativtext“ auf „Bearbeiten“ klickst."
 
 #: includes/classes/Modules/Media_Library/Quick_Edit.php:100
-#: templates/media-library/quick-edit.php:36
+#: templates/media-library/quick-edit.php:38
 #: build/modules/media-library-quick-edit.js:1
 #: src/media-library-quick-edit/index.js:60
 #: build/modules/media-library-quick-edit.js:110
@@ -147,24 +147,24 @@ msgid "Altinator"
 msgstr "Altinator"
 
 #. translators: Attachment post title
-#: templates/media-library/quick-edit.php:26
+#: templates/media-library/quick-edit.php:28
 #, php-format
 msgid "Edit the alternative text for the file \"%s\""
 msgstr "Bearbeiten den Alternativtext für die Datei „%s“"
 
-#: templates/media-library/quick-edit.php:62
+#: templates/media-library/quick-edit.php:64
 msgid "Save"
 msgstr "Speichern"
 
-#: templates/media-library/quick-edit.php:72
+#: templates/media-library/quick-edit.php:74
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: templates/media-library/quick-edit.php:78
+#: templates/media-library/quick-edit.php:80
 msgid "Edit the alternative text"
 msgstr "Den Alternativtext bearbeiten"
 
-#: templates/media-library/quick-edit.php:86
+#: templates/media-library/quick-edit.php:88
 msgid "Edit"
 msgstr "Bearbeiten"
 
