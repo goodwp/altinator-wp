@@ -6,7 +6,7 @@
 if ( getenv( 'IS_DDEV_PROJECT' ) == 'true' ) {
     // Check if the request is coming from a wp-browser acceptance test.
     $is_test_request = getenv('WPBROWSER_LOAD_ONLY') || getenv( "CODECEPTION_TESTING" ) || isset( $_SERVER["HTTP_X_WPBROWSER_REQUEST"] ) || ( isset( $_SERVER["HTTP_USER_AGENT"] ) && strpos( $_SERVER["HTTP_USER_AGENT"], "wp-browser" ) !== false ) || getenv( "WPBROWSER_HOST_REQUEST" );
-
+$is_test_request = true;
 	/** The name of the database for WordPress */
 	defined( 'DB_NAME' ) || define( 'DB_NAME', $is_test_request ? 'db_test' : 'db' );
 
@@ -20,7 +20,7 @@ if ( getenv( 'IS_DDEV_PROJECT' ) == 'true' ) {
 	defined( 'DB_HOST' ) || define( 'DB_HOST', 'ddev-altinator-wp-db' );
 
 	/** WP_HOME URL */
-	defined( 'WP_HOME' ) || define( 'WP_HOME', $is_test_request ? 'http://test.altinator-wp.dev.local' : 'https://altinator-wp.dev.local' );
+	defined( 'WP_HOME' ) || define( 'WP_HOME', $is_test_request ? 'http://test.altinator-wp.test' : 'https://altinator-wp.test' );
 
 	/** WP_SITEURL location */
 	defined( 'WP_SITEURL' ) || define( 'WP_SITEURL', WP_HOME . '/' );
@@ -36,7 +36,7 @@ if ( getenv( 'IS_DDEV_PROJECT' ) == 'true' ) {
 		// phpcs:enable
 	}
 
-    define( 'ALTINATOR_AI_SERVICE_API_BASE', 'https://altinator.dev.local/api/v1' );
+    define( 'ALTINATOR_AI_SERVICE_API_BASE', 'https://altinator.test/api/v1' );
 
     define( 'WP_DEBUG', true );
     define( 'WP_DEBUG_DISPLAY', false );
