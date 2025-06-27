@@ -39,8 +39,7 @@
     "require": {
         "php": "^8.2",
         "goodwp/admin": "~0.7.0",
-        "goodwp/common": "~0.8.0",
-        "goodwp/goodenberg": "^0.1.2"
+        "goodwp/common": "~0.8.0"
     },
     "require-dev": {
         "wp-coding-standards/wpcs": "^3.1",
@@ -55,7 +54,7 @@
         "phpcs": "vendor/bin/phpcs -s",
         "phpcs:fix": "vendor/bin/phpcbf",
         "phpstan": "vendor/bin/phpstan analyze --memory-limit 1G",
-        "lint": "find . -name '*.php' -not -path './.ddev/*' -not -path './vendor/*' -not -path './node_modules/*' -not -path './wordpress/*' -not -path './dependencies/*' -exec php -l '{}' \\;",
+        "lint": "find . -name '*.php' -not -path './.ddev/*' -not -path './node_modules/*' -not -path './wordpress/*' -not -path './dependencies/*' -exec php -l '{}' \\;",
         "plugin-check": "wp plugin check altinator --categories=general,security,performance,accessibility,plugin_repo --exclude-directories=.ddev,dependencies,vendor,wordpress,node_modules,tests,bundled --exclude-files=.gitignore,.env,.distignore,.env.example,src/.gitkeep,phpstan.neon.dist,phpcs.xml.dist",
         "code-quality": [
             "@lint",
