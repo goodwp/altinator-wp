@@ -52,6 +52,9 @@ Please use the [GitHub issue tracker](https://github.com/goodwp/altinator-wp/iss
 
 == Changelog ==
 
+= 1.0.0 (2025-06-27): =
+* The first public release of the plugin 🥳
+
 == Upgrade Notice ==
 
 == Links ==
