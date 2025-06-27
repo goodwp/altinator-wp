@@ -13,6 +13,8 @@
  *  }
  */
 
+defined( 'ABSPATH' ) || exit;
+
 $attachment_id = $data['attachment_id'];
 $alt_text = $data['alt_text'];
 $client_context = $data['client_context'];
