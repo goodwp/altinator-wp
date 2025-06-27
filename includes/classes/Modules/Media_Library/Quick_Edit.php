@@ -51,6 +51,7 @@ class Quick_Edit implements Bootable {
 
         wp_enqueue_script_module( $quick_edit_asset['handle'] );
         // See https://core.trac.wordpress.org/ticket/60647.
+        // Need to manually enqueue those core scripts.
         wp_enqueue_script( 'wp-notices' );
         wp_enqueue_script( 'wp-data' );
         wp_enqueue_script( 'wp-api-fetch' );
