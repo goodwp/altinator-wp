@@ -77,16 +77,16 @@
         },
         {
             "name": "goodwp/common",
-            "version": "0.8.0",
+            "version": "0.8.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:goodwp/common.git",
-                "reference": "0829380a8f40eb96fdc3a6fc9116b89cc82e131e"
+                "reference": "705ea17514a2061f891726105648fefee039dd3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/goodwp/common/zipball/0829380a8f40eb96fdc3a6fc9116b89cc82e131e",
-                "reference": "0829380a8f40eb96fdc3a6fc9116b89cc82e131e",
+                "url": "https://api.github.com/repos/goodwp/common/zipball/705ea17514a2061f891726105648fefee039dd3e",
+                "reference": "705ea17514a2061f891726105648fefee039dd3e",
                 "shasum": ""
             },
             "require": {
@@ -140,10 +140,10 @@
             ],
             "description": "Common library for GoodWP WordPress plugins",
             "support": {
-                "source": "https://github.com/goodwp/common/tree/v0.8.0",
+                "source": "https://github.com/goodwp/common/tree/v0.8.1",
                 "issues": "https://github.com/goodwp/common/issues"
             },
-            "time": "2025-03-21T10:52:36+00:00"
+            "time": "2025-06-27T11:16:14+00:00"
         },
         {
             "name": "lucatume/di52",
