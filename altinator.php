@@ -7,8 +7,8 @@
  * Requires at least: 6.8
  * Requires PHP:      8.2
  * Version:           1.0.0
- * Author:            GoodWP
- * Author URI:        https://goodwp.io
+ * Author:            gaambo
+ * Author URI:        https://fabiantodt.at
  * License:           GNU General Public License v3.0
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       altinator

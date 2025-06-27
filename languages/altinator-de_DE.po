@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Altinator 0.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/html\n"
-"POT-Creation-Date: 2025-06-17T18:12:28+02:00\n"
-"PO-Revision-Date: 2025-06-17 18:12+0200\n"
+"POT-Creation-Date: 2025-06-27T12:06:18+02:00\n"
+"PO-Revision-Date: 2025-06-27 12:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -31,20 +31,20 @@ msgstr ""
 
 #. Author of the plugin
 #: altinator.php
-msgid "GoodWP"
-msgstr "GoodWP"
+msgid "gaambo"
+msgstr ""
 
 #. Author URI of the plugin
 #: altinator.php
-msgid "https://goodwp.io"
-msgstr "https://goodwp.io"
+msgid "https://fabiantodt.at"
+msgstr ""
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:152
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:154
 msgid "Alt-Text Inspector"
 msgstr "Alt-Text-Inspektor"
 
 #. translators: %s: image filename
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:182
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:184
 #, php-format
 msgid ""
 "The image %s is missing alt text. Please add a descriptive alt text for "
@@ -54,46 +54,46 @@ msgstr ""
 "Barrierefreiheit einen beschreibenden Alternativtext hinzu."
 
 #. translators: %s: image filename
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:184
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:186
 #, php-format
 msgid "The image %s has an empty alt text. Please make sure that is correct."
 msgstr ""
 "Das Bild %s hat einen leeren Alternativtext. Bitte stelle sicher, dass dies "
 "korrekt ist."
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:203
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:205
 msgctxt "frontend inspector tooltip"
 msgid "Edit here."
 msgstr "Hier bearbeiten."
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:204
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:206
 msgctxt "frontend inspector tooltip"
 msgid "Edit the image"
 msgstr "Bild bearbeiten"
 
-#: includes/classes/Modules/Media_Library/Filter.php:148
-#: build/modules/media-filter.js:1 src/media-filter/index.js:60
-#: build/modules/media-filter.js:110
+#: includes/classes/Modules/Media_Library/Filter.php:174
+#: build/modules/media-filter.js:1 src/media-filter/index.js:64
+#: build/modules/media-filter.js:114
 msgid "Filter by alt text"
 msgstr "Nach Alternativtext filtern"
 
-#: includes/classes/Modules/Media_Library/Filter.php:151
-#: build/modules/media-filter.js:1 src/media-filter/index.js:12
-#: build/modules/media-filter.js:62
+#: includes/classes/Modules/Media_Library/Filter.php:177
+#: build/modules/media-filter.js:1 src/media-filter/index.js:16
+#: build/modules/media-filter.js:66
 msgctxt "media library filter"
 msgid "Alt Text: All"
 msgstr "Alternativ Text: Alle"
 
-#: includes/classes/Modules/Media_Library/Filter.php:155
-#: build/modules/media-filter.js:1 src/media-filter/index.js:23
-#: build/modules/media-filter.js:73
+#: includes/classes/Modules/Media_Library/Filter.php:181
+#: build/modules/media-filter.js:1 src/media-filter/index.js:27
+#: build/modules/media-filter.js:77
 msgctxt "media library filter"
 msgid "Has Alt Text"
 msgstr "Hat Alternativtext"
 
-#: includes/classes/Modules/Media_Library/Filter.php:164
-#: build/modules/media-filter.js:1 src/media-filter/index.js:34
-#: build/modules/media-filter.js:84
+#: includes/classes/Modules/Media_Library/Filter.php:190
+#: build/modules/media-filter.js:1 src/media-filter/index.js:38
+#: build/modules/media-filter.js:88
 msgctxt "media library filter"
 msgid "No Alt Text"
 msgstr "Kein Alternativ Text"
@@ -106,12 +106,16 @@ msgstr ""
 "Du kannst den Alternativtext einer Datei direkt in der Listenansicht "
 "bearbeiten, indem du in der Spalte „Alternativtext“ auf „Bearbeiten“ klickst."
 
-#: includes/classes/Modules/Media_Library/Quick_Edit.php:92
+#: includes/classes/Modules/Media_Library/Quick_Edit.php:100
+#: templates/media-library/quick-edit.php:36
+#: build/modules/media-library-quick-edit.js:1
+#: src/media-library-quick-edit/index.js:60
+#: build/modules/media-library-quick-edit.js:110
 msgid "No alt-text"
 msgstr "Kein Alt-Text"
 
 #: includes/classes/Settings/Settings.php:46 build/settings.js:51
-#: src/settings/components/sections/modules/index.js:27 build/settings.js:5355
+#: src/settings/components/sections/modules/index.js:27 build/settings.js:5389
 msgid "Enable Frontend Inspector"
 msgstr "Frontend-Inspektor aktivieren"
 
@@ -143,29 +147,41 @@ msgid "Altinator"
 msgstr "Altinator"
 
 #. translators: Attachment post title
-#: templates/admin/media-library/quick-edit.php:26
+#: templates/media-library/quick-edit.php:26
 #, php-format
 msgid "Edit the alternative text for the file \"%s\""
 msgstr "Bearbeiten den Alternativtext für die Datei „%s“"
 
-#: templates/admin/media-library/quick-edit.php:60
+#: templates/media-library/quick-edit.php:62
 msgid "Save"
 msgstr "Speichern"
 
-#: templates/admin/media-library/quick-edit.php:70
+#: templates/media-library/quick-edit.php:72
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: templates/admin/media-library/quick-edit.php:76
+#: templates/media-library/quick-edit.php:78
 msgid "Edit the alternative text"
 msgstr "Den Alternativtext bearbeiten"
 
-#: templates/admin/media-library/quick-edit.php:84
+#: templates/media-library/quick-edit.php:86
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: build/modules/edit-attachment.js:1 build/modules/edit-attachment.js:125
-#: build/modules/media-library-quick-edit.js:183
+#: build/modules/edit-attachment.js:113 build/modules/edit-attachment.js:67
+#: build/modules/media-library-quick-edit.js:73
+msgctxt "quick edit"
+msgid "Generated alternative text"
+msgstr "Generierter Alternativtext"
+
+#: build/modules/edit-attachment.js:113 build/modules/edit-attachment.js:68
+#: build/modules/media-library-quick-edit.js:78
+msgctxt "quick edit"
+msgid "Failed to generate"
+msgstr "Generierung fehlgeschlagen"
+
+#: build/modules/edit-attachment.js:165 build/modules/edit-attachment.js:125
+#: build/modules/media-library-quick-edit.js:194
 msgctxt "media library notice link fallback"
 msgid "More"
 msgstr "Mehr"
@@ -176,21 +192,22 @@ msgid "Save Settings"
 msgstr "Einstellungen speichern"
 
 #: build/settings.js:51 src/settings/components/save/index.js:26
+#: build/settings.js:5140
 msgid "Settings saved!"
 msgstr "Einstellungen gespeichert!"
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:18
-#: build/settings.js:5346
+#: build/settings.js:5380
 msgid "Modules"
 msgstr "Module"
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:19
-#: build/settings.js:5347
+#: build/settings.js:5381
 msgid "Frontend Inspector"
 msgstr "Frontend-Inspektor"
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:28
-#: build/settings.js:5356
+#: build/settings.js:5390
 msgid ""
 "If the frontend inspector feature should be available from the WP Admin Bar."
 msgstr ""
@@ -198,11 +215,12 @@ msgstr ""
 "soll."
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:35
-#: build/settings.js:5363
+#: build/settings.js:5397
 msgid "Alt Fallbacks"
 msgstr "Alt-Fallbacks"
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:38
+#: build/settings.js:5400
 msgid ""
 "Some blocks (like the core image block) provide a field to set the alt "
 "attribute. If this field is empty in the block editor it will not output any "
@@ -215,11 +233,12 @@ msgstr ""
 "hinzufügst."
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:51
-#: build/settings.js:5379
+#: build/settings.js:5413
 msgid "Enable Alt Fallbacks"
 msgstr "Alt-Fallbacks aktivieren"
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:52
+#: build/settings.js:5414
 msgid ""
 "This setting will add the alt attribute to certain blocks if the alt text of "
 "the blocks is empty and the alt text of the media attachments is not empty."
@@ -227,55 +246,8 @@ msgstr ""
 "Diese Einstellung fügt dem Bildblock das Alt-Attribut hinzu, wenn der Alt-"
 "Text des Blocks leer ist und der des Medienanhangs nicht leer ist."
 
-#: build/settings.js:51
-msgid ""
-"By default it will work for the core image, gallery, media-text and cover "
-"block. But you can add third-party and custom blocks via the `altinator/alt-"
-"fallbacks` filter."
-msgstr ""
-"Standardmäßig wird das für den WordPress Bild, Gallerie, Media & Text und "
-"Cover Block angewendet. Du kannst 3rd Party oder eigene Blöcke mit dem "
-"`altinator/alt_fallback/blocks` Filter hinzufügen."
-
-#: build/settings.js:51 src/settings/index.js:25 build/settings.js:5589
-msgid "Altinator Settings"
-msgstr "Altinator-Einstellungen"
-
-#: src/media-library-quick-edit/index.js:29
-#: build/modules/media-library-quick-edit.js:69
-msgctxt "quick edit"
-msgid "Saved"
-msgstr "Gespeichert"
-
-#: src/media-library-quick-edit/index.js:30
-#: build/modules/media-library-quick-edit.js:70
-msgctxt "quick edit"
-msgid "Failed to save"
-msgstr "Speichern fehlgeschlagen"
-
-#: src/media-library-quick-edit/index.js:48
-#: build/modules/media-library-quick-edit.js:100
-msgctxt "quick edit"
-msgid "Edit"
-msgstr "Bearbeiten"
-
-#: src/media-library-quick-edit/index.js:51
-#: build/modules/media-library-quick-edit.js:103
-msgctxt "quick edit"
-msgid "Close"
-msgstr "Schließen"
-
-#: src/media-library-quick-edit/index.js:52
-#: build/modules/media-library-quick-edit.js:104
-msgctxt "quick edit"
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: src/settings/components/password-control.js:28 build/settings.js:5101
-msgid "Show password"
-msgstr "Passwort anzeigen"
-
-#: src/settings/components/sections/modules/index.js:60
+#: build/settings.js:51 src/settings/components/sections/modules/index.js:60
+#: build/settings.js:5422
 msgid ""
 "By default it will work for the core image, gallery, media-text and cover "
 "block. But you can add third-party and custom blocks via the `altinator/"
@@ -285,49 +257,110 @@ msgstr ""
 "Cover Block angewendet. Du kannst 3rd Party oder eigene Blöcke mit dem "
 "`altinator/alt_fallback/blocks` Filter hinzufügen."
 
-#: build/modules/edit-attachment.js:67
-#: build/modules/media-library-quick-edit.js:74
+#: build/settings.js:51 src/settings/index.js:25 build/settings.js:5631
+msgid "Altinator Settings"
+msgstr "Altinator-Einstellungen"
+
+#: src/media-library-quick-edit/index.js:30
+#: build/modules/media-library-quick-edit.js:68
 msgctxt "quick edit"
-msgid "Generated alternative text"
-msgstr "Generierter Alternativtext"
+msgid "Saved"
+msgstr "Gespeichert"
 
-#: build/modules/edit-attachment.js:68
-#: build/modules/media-library-quick-edit.js:79
+#: src/media-library-quick-edit/index.js:31
+#: build/modules/media-library-quick-edit.js:69
 msgctxt "quick edit"
-msgid "Failed to generate"
-msgstr "Generierung fehlgeschlagen"
+msgid "Failed to save"
+msgstr "Speichern fehlgeschlagen"
 
-#: build/settings.js:5198
-msgid "AI Generation Integration"
-msgstr "KI-Generierungsintegration"
+#: src/media-library-quick-edit/index.js:49
+#: build/modules/media-library-quick-edit.js:99
+msgctxt "quick edit"
+msgid "Edit"
+msgstr "Bearbeiten"
 
-#: build/settings.js:5199
+#: src/media-library-quick-edit/index.js:52
+#: build/modules/media-library-quick-edit.js:102
+msgctxt "quick edit"
+msgid "Close"
+msgstr "Schließen"
+
+#: src/media-library-quick-edit/index.js:53
+#: build/modules/media-library-quick-edit.js:103
+msgctxt "quick edit"
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: src/settings/components/password-control.js:28 build/settings.js:5101
+msgid "Show password"
+msgstr "Passwort anzeigen"
+
+#: build/settings.js:5185
 msgid "Altinator AI Service"
 msgstr "Altinator KI-Dienst"
 
-#: build/settings.js:5207
-msgid "Enable AI Generation Integration"
-msgstr "KI-Generierungsintegration aktivieren"
-
-#: build/settings.js:5211
-msgid "Enable the integration with the Altinator AI generation service."
-msgstr "Aktiviere die Integration mit dem KI-Generierungsdienst von Altinator."
-
-#: build/settings.js:5229
+#: build/settings.js:5196
 msgid "API Key"
 msgstr "API-Schlüssel"
 
-#: build/settings.js:5230
+#: build/settings.js:5197
 msgid "Get an API key / token from the Altinator Dashboard and paste it here."
 msgstr ""
 "Holen dir einen API-Schlüssel / Token aus dem Altinator-Dashboard und fügen "
 "ihn hier ein."
 
-#: build/settings.js:5246
+#: build/settings.js:5212
+msgid "Log alt generation requests"
+msgstr "Anfragen zur Alt-Generierung protokollieren"
+
+#: build/settings.js:5216
+msgid ""
+"This allows our Alt Text Generation Service to store your request for a "
+"maximum of 30 days to help with support and error resolving."
+msgstr ""
+"Dies ermöglicht unserem Alt-Text-Generierungsdienst, deine Anfrage für "
+"maximal 30 Tage zu speichern, um bei Support und Fehlerbehebung zu helfen."
+
+#: build/settings.js:5224
+msgid ""
+"If your site/images are protected by basic auth, you must enter the "
+"credentials here, so the generation service can access the images."
+msgstr ""
+"Wenn deine Website/Bilder durch Basic Auth geschützt sind, musst du hier die "
+"Anmeldedaten eingeben, damit der Generierungsdienst auf die Bilder zugreifen "
+"kann."
+
+#: build/settings.js:5239
+msgctxt "basic auth settings label"
+msgid "Username"
+msgstr "Benutzername"
+
+#: build/settings.js:5256
+msgctxt "basic auth settings label"
+msgid "Password"
+msgstr "Passwort"
+
+#: build/settings.js:5291
+msgid "Alt Generation"
+msgstr "Alt Text Generierung"
+
+#: build/settings.js:5292
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: build/settings.js:5300
+msgid "Enable AI Generation Integration"
+msgstr "KI-Generierungsintegration aktivieren"
+
+#: build/settings.js:5304
+msgid "Enable the integration with the Altinator AI generation service."
+msgstr "Aktiviere die Integration mit dem KI-Generierungsdienst von Altinator."
+
+#: build/settings.js:5322
 msgid "User Prompt / Instructions"
 msgstr "Benutzer-Prompt / Anweisungen"
 
-#: build/settings.js:5250
+#: build/settings.js:5326
 msgid ""
 "Add additional prompt/information/context to the alt text generation. "
 "Examples: \"Make it sound playful,\" \"Focus on the historical context,\" "
@@ -338,60 +371,45 @@ msgstr ""
 "„Konzentriere dich auf den historischen Kontext“, „Beschreibe für ein "
 "technisches Publikum“"
 
-#: build/settings.js:5265
-msgid "Log alt generation requests"
-msgstr "Anfragen zur Alt-Generierung protokollieren"
+#: build/settings.js:5356
+msgid "AI Services Integration"
+msgstr "Alt Generierungsintegration"
 
-#: build/settings.js:5269
-msgid ""
-"This allows our Alt Text Generation Service to store your request for a "
-"maximum of 30 days to help with support and error resolving."
-msgstr ""
-"Dies ermöglicht unserem Alt-Text-Generierungsdienst, deine Anfrage für "
-"maximal 30 Tage zu speichern, um bei Support und Fehlerbehebung zu helfen."
+#~ msgid "GoodWP"
+#~ msgstr "GoodWP"
 
-#: build/settings.js:5279
-msgid "Basic Auth Settings"
-msgstr "Basic Auth-Einstellungen"
+#~ msgid "https://goodwp.io"
+#~ msgstr "https://goodwp.io"
 
-#: build/settings.js:5282
-msgid ""
-"If your site/images are protected by basic auth, you must enter the "
-"credentials here, so the generation service can access the images."
-msgstr ""
-"Wenn deine Website/Bilder durch Basic Auth geschützt sind, musst du hier die "
-"Anmeldedaten eingeben, damit der Generierungsdienst auf die Bilder zugreifen "
-"kann."
+#~ msgid ""
+#~ "By default it will work for the core image, gallery, media-text and cover "
+#~ "block. But you can add third-party and custom blocks via the `altinator/"
+#~ "alt-fallbacks` filter."
+#~ msgstr ""
+#~ "Standardmäßig wird das für den WordPress Bild, Gallerie, Media & Text und "
+#~ "Cover Block angewendet. Du kannst 3rd Party oder eigene Blöcke mit dem "
+#~ "`altinator/alt_fallback/blocks` Filter hinzufügen."
 
-#: build/settings.js:5297
-msgctxt "basic auth settings label"
-msgid "Username"
-msgstr "Benutzername"
+#~ msgid "Basic Auth Settings"
+#~ msgstr "Basic Auth-Einstellungen"
 
-#: build/settings.js:5314
-msgctxt "basic auth settings label"
-msgid "Password"
-msgstr "Passwort"
+#~ msgid ""
+#~ "Some blocks (like the core image block) provide a field to set the alt "
+#~ "attribute. If this field is empty in the block editor it will not output "
+#~ "any alt-texte, even if you later add an alt-text to the attachment in the "
+#~ "media library."
+#~ msgstr ""
+#~ "Einige Blöcke (wie der Core-Bildblock) bieten ein Feld zum Festlegen des "
+#~ "Alt-Textes. Wenn dieses Feld jedoch im Block-Editor leer ist, wird kein "
+#~ "Alt-Text ausgegeben, sogar wenn du in der Mediathek einen Alt-Text zum "
+#~ "Bild hinzufügst."
 
-#: build/settings.js:5366
-msgid ""
-"Some blocks (like the core image block) provide a field to set the alt "
-"attribute. If this field is empty in the block editor it will not output any "
-"alt-texte, even if you later add an alt-text to the attachment in the media "
-"library."
-msgstr ""
-"Einige Blöcke (wie der Core-Bildblock) bieten ein Feld zum Festlegen des Alt-"
-"Textes. Wenn dieses Feld jedoch im Block-Editor leer ist, wird kein Alt-Text "
-"ausgegeben, sogar wenn du in der Mediathek einen Alt-Text zum Bild "
-"hinzufügst."
-
-#: build/settings.js:5380
-msgid ""
-"This setting will add the alt attribute to the image block if the blocks alt "
-"text is empty and the media attachments alt text is not empty."
-msgstr ""
-"Diese Einstellung fügt dem Bildblock das Alt-Attribut hinzu, wenn der Alt-"
-"Text des Blocks leer ist und der des Medienanhangs nicht leer ist."
+#~ msgid ""
+#~ "This setting will add the alt attribute to the image block if the blocks "
+#~ "alt text is empty and the media attachments alt text is not empty."
+#~ msgstr ""
+#~ "Diese Einstellung fügt dem Bildblock das Alt-Attribut hinzu, wenn der Alt-"
+#~ "Text des Blocks leer ist und der des Medienanhangs nicht leer ist."
 
 #~ msgid "Passed attachment is not a valid attachment."
 #~ msgstr "Der übergebene Anhang ist kein gültiger Anhang."
