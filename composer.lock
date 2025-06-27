@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4674b413f7b7f4a3dafe72a93156708",
+    "content-hash": "a945437400ead1465636dc63b9fe7d60",
     "packages": [
         {
             "name": "goodwp/admin",

@@ -2,7 +2,7 @@
     "name": "goodwp/altinator",
     "description": "A WordPress plugin to help you optimize your image alternative texts and make your site more accessible.",
     "type": "wordpress-plugin",
-    "version": "1.0.0-alpha.2",
+    "version": "1.0.0-alpha.3",
     "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
