@@ -3,6 +3,7 @@
 namespace GoodWP\Altinator\Modules\Media_Library;
 
 use GoodWP\Altinator\Modules\Module;
+use GoodWP\Altinator\Plugin;
 use GoodWP\Altinator\Vendor\GoodWP\Common\Assets\Asset_Manager_Contract;
 
 class Media_Library_Module extends Module {
@@ -86,7 +87,7 @@ class Media_Library_Module extends Module {
             'media-library-notices',
             'modules/media-library-notices'
         );
-        wp_set_script_translations( $asset_handle, 'altinator' );
+        wp_set_script_translations( $asset_handle, 'altinator', Plugin::get_instance()->get_path( 'languages' ) );
         $this->asset_manager->register_style(
             'media-library-notices',
             'modules/media-library-notices',

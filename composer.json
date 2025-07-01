@@ -111,8 +111,10 @@
         ],
         "i18n": [
             "wp i18n make-pot . ./languages/altinator.pot --exclude=dependencies,vendor,wordpress,node_modules",
+            "wp i18n update-po languages/altinator.pot",
             "wp i18n make-mo languages",
-            "wp i18n make-php languages"
+            "wp i18n make-php languages",
+            "wp i18n make-json languages"
         ],
         "build": [
             "@composer install --no-dev --no-scripts",

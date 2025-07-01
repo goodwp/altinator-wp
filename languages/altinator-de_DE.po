@@ -1,17 +1,15 @@
-# Copyright (C) 2025 GoodWP
-# This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
 "Project-Id-Version: Altinator 0.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/html\n"
-"POT-Creation-Date: 2025-06-27T12:40:38+02:00\n"
-"PO-Revision-Date: 2025-06-27 12:40+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-07-01T15:00:51+02:00\n"
+"PO-Revision-Date: 2025-07-01 15:08+0200\n"
+"Language: de\n"
 "X-Generator: Poedit 3.6\n"
 "X-Domain: altinator\n"
 
@@ -22,12 +20,8 @@ msgstr "Altinator"
 
 #. Description of the plugin
 #: altinator.php
-msgid ""
-"Helps you optimize your image alternative texts and make your site more "
-"accessible."
-msgstr ""
-"Hilft dir, die Alternativtexte deiner Bilder zu optimieren und deine Website "
-"barrierefreier zu machen."
+msgid "Helps you optimize your image alternative texts and make your site more accessible."
+msgstr "Hilft dir, die Alternativtexte deiner Bilder zu optimieren und deine Website barrierefreier zu machen."
 
 #. Author of the plugin
 #: altinator.php
@@ -39,74 +33,68 @@ msgstr ""
 msgid "https://fabiantodt.at"
 msgstr ""
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:154
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:155
 msgid "Alt-Text Inspector"
 msgstr "Alt-Text-Inspektor"
 
 #. translators: %s: image filename
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:184
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:185
 #, php-format
-msgid ""
-"The image %s is missing alt text. Please add a descriptive alt text for "
-"accessibility."
-msgstr ""
-"Bei dem Bild %s fehlt der Alternativtext. Bitte füge für die "
-"Barrierefreiheit einen beschreibenden Alternativtext hinzu."
+msgid "The image %s is missing alt text. Please add a descriptive alt text for accessibility."
+msgstr "Bei dem Bild %s fehlt der Alternativtext. Bitte füge für die Barrierefreiheit einen beschreibenden Alternativtext hinzu."
 
 #. translators: %s: image filename
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:186
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:187
 #, php-format
 msgid "The image %s has an empty alt text. Please make sure that is correct."
-msgstr ""
-"Das Bild %s hat einen leeren Alternativtext. Bitte stelle sicher, dass dies "
-"korrekt ist."
+msgstr "Das Bild %s hat einen leeren Alternativtext. Bitte stelle sicher, dass dies korrekt ist."
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:205
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:206
 msgctxt "frontend inspector tooltip"
 msgid "Edit here."
 msgstr "Hier bearbeiten."
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:206
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:207
 msgctxt "frontend inspector tooltip"
 msgid "Edit the image"
 msgstr "Bild bearbeiten"
 
-#: includes/classes/Modules/Media_Library/Filter.php:174
-#: build/modules/media-filter.js:1 src/media-filter/index.js:64
+#: includes/classes/Modules/Media_Library/Filter.php:175
+#: build/modules/media-filter.js:1
+#: src/media-filter/index.js:64
 #: build/modules/media-filter.js:114
 msgid "Filter by alt text"
 msgstr "Nach Alternativtext filtern"
 
-#: includes/classes/Modules/Media_Library/Filter.php:177
-#: build/modules/media-filter.js:1 src/media-filter/index.js:16
+#: includes/classes/Modules/Media_Library/Filter.php:178
+#: build/modules/media-filter.js:1
+#: src/media-filter/index.js:16
 #: build/modules/media-filter.js:66
 msgctxt "media library filter"
 msgid "Alt Text: All"
 msgstr "Alternativ Text: Alle"
 
-#: includes/classes/Modules/Media_Library/Filter.php:181
-#: build/modules/media-filter.js:1 src/media-filter/index.js:27
+#: includes/classes/Modules/Media_Library/Filter.php:182
+#: build/modules/media-filter.js:1
+#: src/media-filter/index.js:27
 #: build/modules/media-filter.js:77
 msgctxt "media library filter"
 msgid "Has Alt Text"
 msgstr "Hat Alternativtext"
 
-#: includes/classes/Modules/Media_Library/Filter.php:190
-#: build/modules/media-filter.js:1 src/media-filter/index.js:38
+#: includes/classes/Modules/Media_Library/Filter.php:191
+#: build/modules/media-filter.js:1
+#: src/media-filter/index.js:38
 #: build/modules/media-filter.js:88
 msgctxt "media library filter"
 msgid "No Alt Text"
 msgstr "Kein Alternativ Text"
 
-#: includes/classes/Modules/Media_Library/Media_Library_Module.php:76
-msgid ""
-"You can edit the alternative text of a file directly in the list view, by "
-"clicking \"Edit\" in the \"Alternative Text\" column."
-msgstr ""
-"Du kannst den Alternativtext einer Datei direkt in der Listenansicht "
-"bearbeiten, indem du in der Spalte „Alternativtext“ auf „Bearbeiten“ klickst."
+#: includes/classes/Modules/Media_Library/Media_Library_Module.php:77
+msgid "You can edit the alternative text of a file directly in the list view, by clicking \"Edit\" in the \"Alternative Text\" column."
+msgstr "Du kannst den Alternativtext einer Datei direkt in der Listenansicht bearbeiten, indem du in der Spalte „Alternativtext“ auf „Bearbeiten“ klickst."
 
-#: includes/classes/Modules/Media_Library/Quick_Edit.php:100
+#: includes/classes/Modules/Media_Library/Quick_Edit.php:101
 #: templates/media-library/quick-edit.php:38
 #: build/modules/media-library-quick-edit.js:1
 #: src/media-library-quick-edit/index.js:60
@@ -114,34 +102,27 @@ msgstr ""
 msgid "No alt-text"
 msgstr "Kein Alt-Text"
 
-#: includes/classes/Settings/Settings.php:46 build/settings.js:51
-#: src/settings/components/sections/modules/index.js:27 build/settings.js:5389
+#: includes/classes/Settings/Settings.php:55
+#: build/settings.js:51
+#: src/settings/components/sections/modules/index.js:27
+#: build/settings.js:5389
 msgid "Enable Frontend Inspector"
 msgstr "Frontend-Inspektor aktivieren"
 
-#: includes/classes/Settings/Settings.php:47
-msgid ""
-"Enables the frontend inspector to show images without or with an empty alt "
-"attribute."
-msgstr ""
-"Aktiviert den Frontend-Inspektor, um Bilder ohne oder mit einem leeren Alt-"
-"Attribut anzuzeigen."
+#: includes/classes/Settings/Settings.php:56
+msgid "Enables the frontend inspector to show images without or with an empty alt attribute."
+msgstr "Aktiviert den Frontend-Inspektor, um Bilder ohne oder mit einem leeren Alt-Attribut anzuzeigen."
 
-#: includes/classes/Settings/Settings.php:54
+#: includes/classes/Settings/Settings.php:63
 msgid "Enable Alt Fallback"
 msgstr "Alt-Fallback aktivieren"
 
-#: includes/classes/Settings/Settings.php:55
-msgid ""
-"Outputs the media attachments alt text on certain blocks that have their own "
-"alt attribute setting. By default works on the core image, media-text and "
-"cover block."
-msgstr ""
-"Gibt das Alt-Attribut des Medienanhangs bei bestimmten Blöcken aus, die ein "
-"eigenes Feld für das Alt-Attribut haben."
+#: includes/classes/Settings/Settings.php:64
+msgid "Outputs the media attachments alt text on certain blocks that have their own alt attribute setting. By default works on the core image, media-text and cover block."
+msgstr "Gibt das Alt-Attribut des Medienanhangs bei bestimmten Blöcken aus, die ein eigenes Feld für das Alt-Attribut haben."
 
-#: includes/classes/Settings/Settings_Screen.php:44
 #: includes/classes/Settings/Settings_Screen.php:45
+#: includes/classes/Settings/Settings_Screen.php:46
 msgctxt "Settings Page"
 msgid "Altinator"
 msgstr "Altinator"
@@ -172,13 +153,13 @@ msgstr "Bearbeiten"
 #: build/modules/media-library-quick-edit.js:73
 msgctxt "quick edit"
 msgid "Generated alternative text"
-msgstr "Generierter Alternativtext"
+msgstr "Generierter Alt-Text"
 
 #: build/modules/edit-attachment.js:113 build/modules/edit-attachment.js:68
 #: build/modules/media-library-quick-edit.js:78
 msgctxt "quick edit"
 msgid "Failed to generate"
-msgstr "Generierung fehlgeschlagen"
+msgstr "Fehler beim Generieren"
 
 #: build/modules/edit-attachment.js:165 build/modules/edit-attachment.js:125
 #: build/modules/media-library-quick-edit.js:194
@@ -208,29 +189,18 @@ msgstr "Frontend-Inspektor"
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:28
 #: build/settings.js:5390
-msgid ""
-"If the frontend inspector feature should be available from the WP Admin Bar."
-msgstr ""
-"Ob die Frontend-Inspektor-Funktion in der WP-Admin-Leiste verfügbar sein "
-"soll."
+msgid "If the frontend inspector feature should be available from the WP Admin Bar."
+msgstr "Ob der Frontend-Inspektor in der WP Werkzeugleiste verfügbar sein soll."
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:35
 #: build/settings.js:5397
 msgid "Alt Fallbacks"
-msgstr "Alt-Fallbacks"
+msgstr "Alt-Text Fallbacks"
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:38
 #: build/settings.js:5400
-msgid ""
-"Some blocks (like the core image block) provide a field to set the alt "
-"attribute. If this field is empty in the block editor it will not output any "
-"alt-text, even if you later add an alt-text to the attachment in the media "
-"library."
-msgstr ""
-"Einige Blöcke (wie der Core-Bildblock) bieten ein Feld zum Festlegen des Alt-"
-"Textes. Wenn dieses Feld jedoch im Block-Editor leer ist, wird kein Alt-Text "
-"ausgegeben, sogar wenn du in der Mediathek einen Alt-Text zum Bild "
-"hinzufügst."
+msgid "Some blocks (like the core image block) provide a field to set the alt attribute. If this field is empty in the block editor it will not output any alt-text, even if you later add an alt-text to the attachment in the media library."
+msgstr "Einige Blöcke (wie der Core-Bildblock) bieten ein Feld zum Festlegen des Alt-Textes. Wenn dieses Feld jedoch im Block-Editor leer ist, wird kein Alt-Text ausgegeben, sogar wenn du in der Mediathek einen Alt-Text zum Bild hinzufügst."
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:51
 #: build/settings.js:5413
@@ -239,27 +209,17 @@ msgstr "Alt-Fallbacks aktivieren"
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:52
 #: build/settings.js:5414
-msgid ""
-"This setting will add the alt attribute to certain blocks if the alt text of "
-"the blocks is empty and the alt text of the media attachments is not empty."
-msgstr ""
-"Diese Einstellung fügt dem Bildblock das Alt-Attribut hinzu, wenn der Alt-"
-"Text des Blocks leer ist und der des Medienanhangs nicht leer ist."
+msgid "This setting will add the alt attribute to certain blocks if the alt text of the blocks is empty and the alt text of the media attachments is not empty."
+msgstr "Diese Einstellung fügt dem Bildblock das Alt-Attribut hinzu, wenn der Alt-Text des Blocks leer ist und der des Medienanhangs nicht leer ist."
 
 #: build/settings.js:51 src/settings/components/sections/modules/index.js:60
 #: build/settings.js:5422
-msgid ""
-"By default it will work for the core image, gallery, media-text and cover "
-"block. But you can add third-party and custom blocks via the `altinator/"
-"alt_fallback/blocks` filter."
-msgstr ""
-"Standardmäßig wird das für den WordPress Bild, Gallerie, Media & Text und "
-"Cover Block angewendet. Du kannst 3rd Party oder eigene Blöcke mit dem "
-"`altinator/alt_fallback/blocks` Filter hinzufügen."
+msgid "By default it will work for the core image, gallery, media-text and cover block. But you can add third-party and custom blocks via the `altinator/alt_fallback/blocks` filter."
+msgstr "Standardmäßig wird das für den WordPress Bild, Gallerie, Media & Text und Cover Block angewendet. Du kannst 3rd Party oder eigene Blöcke mit dem `altinator/alt_fallback/blocks` Filter hinzufügen."
 
 #: build/settings.js:51 src/settings/index.js:25 build/settings.js:5631
 msgid "Altinator Settings"
-msgstr "Altinator-Einstellungen"
+msgstr "Altinator Einstellungen"
 
 #: src/media-library-quick-edit/index.js:30
 #: build/modules/media-library-quick-edit.js:68
@@ -271,7 +231,7 @@ msgstr "Gespeichert"
 #: build/modules/media-library-quick-edit.js:69
 msgctxt "quick edit"
 msgid "Failed to save"
-msgstr "Speichern fehlgeschlagen"
+msgstr "Fehler beim Speichern"
 
 #: src/media-library-quick-edit/index.js:49
 #: build/modules/media-library-quick-edit.js:99
@@ -297,182 +257,62 @@ msgstr "Passwort anzeigen"
 
 #: build/settings.js:5185
 msgid "Altinator AI Service"
-msgstr "Altinator KI-Dienst"
+msgstr ""
 
 #: build/settings.js:5196
 msgid "API Key"
-msgstr "API-Schlüssel"
+msgstr ""
 
 #: build/settings.js:5197
 msgid "Get an API key / token from the Altinator Dashboard and paste it here."
 msgstr ""
-"Holen dir einen API-Schlüssel / Token aus dem Altinator-Dashboard und fügen "
-"ihn hier ein."
 
 #: build/settings.js:5212
 msgid "Log alt generation requests"
-msgstr "Anfragen zur Alt-Generierung protokollieren"
+msgstr ""
 
 #: build/settings.js:5216
-msgid ""
-"This allows our Alt Text Generation Service to store your request for a "
-"maximum of 30 days to help with support and error resolving."
+msgid "This allows our Alt Text Generation Service to store your request for a maximum of 30 days to help with support and error resolving."
 msgstr ""
-"Dies ermöglicht unserem Alt-Text-Generierungsdienst, deine Anfrage für "
-"maximal 30 Tage zu speichern, um bei Support und Fehlerbehebung zu helfen."
 
 #: build/settings.js:5224
-msgid ""
-"If your site/images are protected by basic auth, you must enter the "
-"credentials here, so the generation service can access the images."
+msgid "If your site/images are protected by basic auth, you must enter the credentials here, so the generation service can access the images."
 msgstr ""
-"Wenn deine Website/Bilder durch Basic Auth geschützt sind, musst du hier die "
-"Anmeldedaten eingeben, damit der Generierungsdienst auf die Bilder zugreifen "
-"kann."
 
 #: build/settings.js:5239
 msgctxt "basic auth settings label"
 msgid "Username"
-msgstr "Benutzername"
+msgstr ""
 
 #: build/settings.js:5256
 msgctxt "basic auth settings label"
 msgid "Password"
-msgstr "Passwort"
+msgstr ""
 
 #: build/settings.js:5291
 msgid "Alt Generation"
-msgstr "Alt Text Generierung"
+msgstr ""
 
 #: build/settings.js:5292
 msgid "General Settings"
-msgstr "Allgemeine Einstellungen"
+msgstr ""
 
 #: build/settings.js:5300
 msgid "Enable AI Generation Integration"
-msgstr "KI-Generierungsintegration aktivieren"
+msgstr ""
 
 #: build/settings.js:5304
 msgid "Enable the integration with the Altinator AI generation service."
-msgstr "Aktiviere die Integration mit dem KI-Generierungsdienst von Altinator."
+msgstr ""
 
 #: build/settings.js:5322
 msgid "User Prompt / Instructions"
-msgstr "Benutzer-Prompt / Anweisungen"
+msgstr ""
 
 #: build/settings.js:5326
-msgid ""
-"Add additional prompt/information/context to the alt text generation. "
-"Examples: \"Make it sound playful,\" \"Focus on the historical context,\" "
-"\"Describe for a technical audience\""
+msgid "Add additional prompt/information/context to the alt text generation. Examples: \"Make it sound playful,\" \"Focus on the historical context,\" \"Describe for a technical audience\""
 msgstr ""
-"Fügen der Generierung von Alternativtexten zusätzliche Anweisungen/"
-"Informationen/Kontext hinzu. Beispiele: „Lass es verspielt klingen“, "
-"„Konzentriere dich auf den historischen Kontext“, „Beschreibe für ein "
-"technisches Publikum“"
 
 #: build/settings.js:5356
 msgid "AI Services Integration"
-msgstr "Alt Generierungsintegration"
-
-#~ msgid "GoodWP"
-#~ msgstr "GoodWP"
-
-#~ msgid "https://goodwp.io"
-#~ msgstr "https://goodwp.io"
-
-#~ msgid ""
-#~ "By default it will work for the core image, gallery, media-text and cover "
-#~ "block. But you can add third-party and custom blocks via the `altinator/"
-#~ "alt-fallbacks` filter."
-#~ msgstr ""
-#~ "Standardmäßig wird das für den WordPress Bild, Gallerie, Media & Text und "
-#~ "Cover Block angewendet. Du kannst 3rd Party oder eigene Blöcke mit dem "
-#~ "`altinator/alt_fallback/blocks` Filter hinzufügen."
-
-#~ msgid "Basic Auth Settings"
-#~ msgstr "Basic Auth-Einstellungen"
-
-#~ msgid ""
-#~ "Some blocks (like the core image block) provide a field to set the alt "
-#~ "attribute. If this field is empty in the block editor it will not output "
-#~ "any alt-texte, even if you later add an alt-text to the attachment in the "
-#~ "media library."
-#~ msgstr ""
-#~ "Einige Blöcke (wie der Core-Bildblock) bieten ein Feld zum Festlegen des "
-#~ "Alt-Textes. Wenn dieses Feld jedoch im Block-Editor leer ist, wird kein "
-#~ "Alt-Text ausgegeben, sogar wenn du in der Mediathek einen Alt-Text zum "
-#~ "Bild hinzufügst."
-
-#~ msgid ""
-#~ "This setting will add the alt attribute to the image block if the blocks "
-#~ "alt text is empty and the media attachments alt text is not empty."
-#~ msgstr ""
-#~ "Diese Einstellung fügt dem Bildblock das Alt-Attribut hinzu, wenn der Alt-"
-#~ "Text des Blocks leer ist und der des Medienanhangs nicht leer ist."
-
-#~ msgid "Passed attachment is not a valid attachment."
-#~ msgstr "Der übergebene Anhang ist kein gültiger Anhang."
-
-#~ msgid ""
-#~ "The API configuration seems to be invalid. Please check the settings "
-#~ "screen and make sure you have entered an API key."
-#~ msgstr ""
-#~ "Die API-Konfiguration scheint ungültig zu sein. Bitte überprüfe die "
-#~ "Einstellungsseite und stelle sicher, dass du einen API-Schlüssel "
-#~ "eingegeben hast."
-
-#~ msgid "Could not build the correct image_url."
-#~ msgstr "Die korrekte URL des Bildes konnte nicht erstellt werden."
-
-#~ msgid "Invalid attachment ID."
-#~ msgstr "Ungültige Anhang-ID."
-
-#~ msgid "Buy credits"
-#~ msgstr "Guthaben kaufen"
-
-#~ msgid ""
-#~ "Make sure the image is publicly accessible. If your site is protected by "
-#~ "basic auth, make sure to configure it in the Altinator settings."
-#~ msgstr ""
-#~ "Stelle sicher, dass das Bild öffentlich zugänglich ist. Wenn deine "
-#~ "Website durch Basic Auth geschützt ist, konfiguriere dies bitte in den "
-#~ "Altinator-Einstellungen."
-
-#~ msgid "Service API Key"
-#~ msgstr "Dienst-API-Schlüssel"
-
-#~ msgid "User Prompt"
-#~ msgstr "Benutzer-Prompt"
-
-#~ msgid ""
-#~ "Add additional prompt/information/context to the alt text generation."
-#~ msgstr ""
-#~ "Füge der Generierung von Alternativtexten zusätzliche Anweisungen/"
-#~ "Informationen/Kontext hinzu."
-
-#~ msgid "Basic Auth User"
-#~ msgstr "Basic Auth Benutzer"
-
-#~ msgid ""
-#~ "Required if your site is protected by basic auth, so the generation "
-#~ "service can access the images."
-#~ msgstr ""
-#~ "Erforderlich, wenn deine Website durch Basic Auth geschützt ist, damit "
-#~ "der Generierungsdienst auf die Bilder zugreifen kann."
-
-#~ msgctxt "generate button label"
-#~ msgid "Generate alternative text with AI"
-#~ msgstr "Alternativtext mit KI generieren"
-
-#~ msgctxt "generate button label"
-#~ msgid "Generate with AI"
-#~ msgstr "Mit KI generieren"
-
-#~ msgctxt "media library filter"
-#~ msgid "All"
-#~ msgstr "Alle"
-
-#~ msgctxt "media library filter"
-#~ msgid "No alt text"
-#~ msgstr "Kein Alternativtext"
+msgstr ""

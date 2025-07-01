@@ -2,6 +2,7 @@
 
 namespace GoodWP\Altinator\Settings;
 
+use GoodWP\Altinator\Plugin;
 use GoodWP\Altinator\Vendor\GoodWP\Admin\Screens\Admin_Screen;
 use GoodWP\Altinator\Vendor\GoodWP\Common\Assets\Asset_Manager_Contract;
 use GoodWP\Altinator\Vendor\GoodWP\Common\Assets\Has_Assets;
@@ -70,7 +71,7 @@ class Settings_Screen extends Admin_Screen implements Bootable {
      */
     public function register_assets(): void {
         $script_asset_handle = $this->asset_manager->register_script( 'settings', 'settings' );
-        wp_set_script_translations( $script_asset_handle, 'altinator' );
+        wp_set_script_translations( $script_asset_handle, 'altinator', Plugin::get_instance()->get_path( 'languages' ) );
         $this->asset_manager->enqueue_script( 'settings' );
         $this->asset_manager->register_style( 'settings', 'settings', [ 'wp-components', 'wp-editor', 'wp-block-editor', 'wp-block-editor-content' ] );
         $this->asset_manager->enqueue_style( 'settings' );

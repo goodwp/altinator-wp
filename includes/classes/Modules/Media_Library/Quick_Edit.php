@@ -2,6 +2,7 @@
 
 namespace GoodWP\Altinator\Modules\Media_Library;
 
+use GoodWP\Altinator\Plugin;
 use GoodWP\Altinator\Vendor\GoodWP\Common\Assets\Asset_Manager_Contract;
 use GoodWP\Altinator\Vendor\GoodWP\Common\Contracts\Bootable;
 use GoodWP\Altinator\Vendor\GoodWP\Common\Templates\Template_Renderer_Contract;
@@ -60,8 +61,8 @@ class Quick_Edit implements Bootable {
         // This is a dummy script that is only used to register the translations.
         // Workaround for https://core.trac.wordpress.org/ticket/60234 .
         $dummy_handle = $this->asset_manager->register_script( 'media-library-quick-edit-dummy', 'modules/media-library-quick-edit-dummy' );
-        $this->asset_manager->enqueue_script( 'media-library-quick-edit' );
-        wp_set_script_translations( $dummy_handle, 'altinator' );
+        $this->asset_manager->enqueue_script( 'media-library-quick-edit-dummy' );
+        wp_set_script_translations( $dummy_handle, 'altinator', Plugin::get_instance()->get_path( 'languages' ) );
 
         $this->asset_manager->register_style( 'media-library-quick-edit', 'modules/media-library-quick-edit' );
         $this->asset_manager->enqueue_style( 'media-library-quick-edit' );

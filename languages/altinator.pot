@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-27T12:40:49+02:00\n"
+"POT-Creation-Date: 2025-07-01T15:10:07+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: altinator\n"
@@ -34,40 +34,40 @@ msgstr ""
 msgid "https://fabiantodt.at"
 msgstr ""
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:154
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:155
 msgid "Alt-Text Inspector"
 msgstr ""
 
 #. translators: %s: image filename
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:184
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:185
 #, php-format
 msgid "The image %s is missing alt text. Please add a descriptive alt text for accessibility."
 msgstr ""
 
 #. translators: %s: image filename
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:186
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:187
 #, php-format
 msgid "The image %s has an empty alt text. Please make sure that is correct."
 msgstr ""
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:205
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:206
 msgctxt "frontend inspector tooltip"
 msgid "Edit here."
 msgstr ""
 
-#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:206
+#: includes/classes/Modules/Frontend_Inspector/Frontend_Inspector_Module.php:207
 msgctxt "frontend inspector tooltip"
 msgid "Edit the image"
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Filter.php:174
+#: includes/classes/Modules/Media_Library/Filter.php:175
 #: build/modules/media-filter.js:1
 #: src/media-filter/index.js:64
 #: build/modules/media-filter.js:114
 msgid "Filter by alt text"
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Filter.php:177
+#: includes/classes/Modules/Media_Library/Filter.php:178
 #: build/modules/media-filter.js:1
 #: src/media-filter/index.js:16
 #: build/modules/media-filter.js:66
@@ -75,7 +75,7 @@ msgctxt "media library filter"
 msgid "Alt Text: All"
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Filter.php:181
+#: includes/classes/Modules/Media_Library/Filter.php:182
 #: build/modules/media-filter.js:1
 #: src/media-filter/index.js:27
 #: build/modules/media-filter.js:77
@@ -83,7 +83,7 @@ msgctxt "media library filter"
 msgid "Has Alt Text"
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Filter.php:190
+#: includes/classes/Modules/Media_Library/Filter.php:191
 #: build/modules/media-filter.js:1
 #: src/media-filter/index.js:38
 #: build/modules/media-filter.js:88
@@ -91,11 +91,11 @@ msgctxt "media library filter"
 msgid "No Alt Text"
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Media_Library_Module.php:76
+#: includes/classes/Modules/Media_Library/Media_Library_Module.php:77
 msgid "You can edit the alternative text of a file directly in the list view, by clicking \"Edit\" in the \"Alternative Text\" column."
 msgstr ""
 
-#: includes/classes/Modules/Media_Library/Quick_Edit.php:100
+#: includes/classes/Modules/Media_Library/Quick_Edit.php:101
 #: templates/media-library/quick-edit.php:38
 #: build/modules/media-library-quick-edit.js:1
 #: src/media-library-quick-edit/index.js:60
@@ -103,27 +103,27 @@ msgstr ""
 msgid "No alt-text"
 msgstr ""
 
-#: includes/classes/Settings/Settings.php:46
+#: includes/classes/Settings/Settings.php:55
 #: build/settings.js:51
 #: src/settings/components/sections/modules/index.js:27
 #: build/settings.js:5389
 msgid "Enable Frontend Inspector"
 msgstr ""
 
-#: includes/classes/Settings/Settings.php:47
+#: includes/classes/Settings/Settings.php:56
 msgid "Enables the frontend inspector to show images without or with an empty alt attribute."
 msgstr ""
 
-#: includes/classes/Settings/Settings.php:54
+#: includes/classes/Settings/Settings.php:63
 msgid "Enable Alt Fallback"
 msgstr ""
 
-#: includes/classes/Settings/Settings.php:55
+#: includes/classes/Settings/Settings.php:64
 msgid "Outputs the media attachments alt text on certain blocks that have their own alt attribute setting. By default works on the core image, media-text and cover block."
 msgstr ""
 
-#: includes/classes/Settings/Settings_Screen.php:44
 #: includes/classes/Settings/Settings_Screen.php:45
+#: includes/classes/Settings/Settings_Screen.php:46
 msgctxt "Settings Page"
 msgid "Altinator"
 msgstr ""

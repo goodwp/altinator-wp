@@ -4,6 +4,7 @@ namespace GoodWP\Altinator\Modules\Frontend_Inspector;
 
 use GoodWP\Altinator\Helper\Attachment_Helper;
 use GoodWP\Altinator\Modules\Module;
+use GoodWP\Altinator\Plugin;
 use GoodWP\Altinator\Settings\Settings;
 use GoodWP\Altinator\Vendor\GoodWP\Common\Assets\Asset_Manager_Contract;
 use WP_Admin_Bar;
@@ -134,7 +135,7 @@ class Frontend_Inspector_Module extends Module {
             'before'
         );
 
-        wp_set_script_translations( $script_handle, 'altinator' );
+        wp_set_script_translations( $script_handle, 'altinator', Plugin::get_instance()->get_path( 'languages' ) );
 
         $this->asset_manager->enqueue_script( 'frontend-inspector' );
         $this->asset_manager->enqueue_style( 'frontend-inspector' );

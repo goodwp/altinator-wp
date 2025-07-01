@@ -2,6 +2,7 @@
 
 namespace GoodWP\Altinator\Modules\Media_Library;
 
+use GoodWP\Altinator\Plugin;
 use GoodWP\Altinator\Vendor\GoodWP\Common\Assets\Asset_Manager_Contract;
 use GoodWP\Altinator\Vendor\GoodWP\Common\Contracts\Bootable;
 use WP_Query;
@@ -224,6 +225,6 @@ class Filter implements Bootable {
         $asset_handle = $this->asset_manager->register_script( 'media-filter', 'modules/media-filter', [ 'media-views' ] );
         $this->asset_manager->enqueue_script( 'media-filter' );
 
-        wp_set_script_translations( $asset_handle, 'altinator' );
+        wp_set_script_translations( $asset_handle, 'altinator', Plugin::get_instance()->get_path( 'languages' ) );
     }
 }
